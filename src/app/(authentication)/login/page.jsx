@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { loginUser, getCurrentUser } from "@/lib/api";
 import { useAuth } from "@/app/context/AuthContext";
 import Link from "next/link";
@@ -8,9 +8,6 @@ import toast from "react-hot-toast";
 
 const login = () => {
   const router = useRouter();
-
-  const searchParams = useSearchParams();
-  const next = searchParams.get("next") || "/predict";
   
   const { login } = useAuth();
   const [email, setEmail] = useState("");
@@ -30,7 +27,7 @@ const login = () => {
       
       toast.success("تم تسجيل الدخول بنجاح");
       
-      router.replace(next);
+      router.replace("/");
     } catch (err) {
       setError(" حدث خطأ اثناء تسجيل الدخول");
     } finally {
