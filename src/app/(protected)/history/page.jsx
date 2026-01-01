@@ -28,20 +28,6 @@ const page = () => {
 
     fetchHistory();
   }, []);
-
-  // const handleDelete = async () => {
-  //     setDeleting(true);
-  //     try {
-  //       await deleteCurrentUser();
-  //       toast.success("تم حذف الحساب بنجاح");
-  //       setIsOpen(false);
-  //       router.push("/login");
-  //     } catch (error) {
-  //       toast.error("فشل حذف الحساب");
-  //     } finally {
-  //       setDeleting(false);
-  //     }
-  //   };
   // ✅ ASYNC clear with confirm popup
   const handleClearHistory = async () => {
     setClearing(true);
