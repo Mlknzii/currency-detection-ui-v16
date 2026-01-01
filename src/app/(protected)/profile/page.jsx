@@ -154,10 +154,7 @@ const profile = () => {
               </button>
 
               <button
-                onClick={() => {
-                  handleDelete();
-                  router.push("/login");
-                }}
+                onClick={handleDelete}}
                 disabled={deleting}
                 className="flex-1 px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition"
               >
