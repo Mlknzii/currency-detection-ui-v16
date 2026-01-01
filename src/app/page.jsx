@@ -8,9 +8,6 @@ export default function Home() {
         <h1 className="text-4xl md:text-5xl font-bold text-center text-indigo-500">
           مرحبا بك في متعرف العملات... <br /> كيف يمكنني مساعدتك ؟
         </h1>
-        <p className=" text-lg text-gray-500 dark:text-gray-300 mt-4 text-center">
-          لنبدأ بالتعرف الآن عن طريق التقاط أو رفع الصور.
-        </p>
         <Link href="/predict" className="btn btn-primary inline-block mt-6">
           ابدأ الآن
           <FaArrowLeft className=" inline-block mr-2" />
