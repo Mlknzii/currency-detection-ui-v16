@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 const TOKEN_KEY = "token";
 
 export const setToken = (token) => {
-  Cookies.set(TOKEN_KEY, token, { expires: 7 });
+  Cookies.set(TOKEN_KEY, token, { expires: 7,secure: true, sameSite: "lax", });
 };
 
 export const getToken = () => Cookies.get(TOKEN_KEY);
