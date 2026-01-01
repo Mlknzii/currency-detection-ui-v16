@@ -17,7 +17,7 @@ export const getSinglePrediction = async (id) => {
 
 export const clearPredictions = async () => {
   const res = await apiClient.delete("/predict/clear");
-  return res.data;
+  return true;
 };
 
 /* ===========================
