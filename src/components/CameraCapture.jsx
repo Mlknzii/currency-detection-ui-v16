@@ -9,6 +9,8 @@ export default function CameraCapture({ onCapture }) {
 
   const [open, setOpen] = useState(false);
   const [error, setError] = useState("");
+  const [facingMode, setFacingMode] = useState("environment"); // default rear camera
+
 
   /* ───────── Open camera ───────── */
   const openCamera = async () => {
@@ -48,6 +50,16 @@ export default function CameraCapture({ onCapture }) {
     closeCamera();
   };
 
+   /* ───────── Switch camera ───────── */
+  const switchCamera = () => {
+    setFacingMode((prev) => (prev === "user" ? "environment" : "user"));
+    // Restart camera with new facing mode
+    if (open) {
+      closeCamera();
+      setTimeout(openCamera, 100); // slight delay to ensure tracks are stopped
+    }
+  };
+  
   /* ───────── Cleanup on unmount ───────── */
   useEffect(() => {
     return () => closeCamera();
@@ -87,7 +99,14 @@ export default function CameraCapture({ onCapture }) {
                 onClick={capture}
                 className="flex-1 rounded bg-green-600 py-2"
               >
-                Capture
+                التقاط
+              </button>
+              <button
+                type="button"
+                onClick={switchCamera}
+                className="flex-1 rounded bg-blue-600 py-2"
+              >
+                تبديل الكاميرا
               </button>
 
               <button
@@ -95,7 +114,7 @@ export default function CameraCapture({ onCapture }) {
                 onClick={closeCamera}
                 className="flex-1 rounded bg-gray-600 py-2"
               >
-                Cancel
+                الغاء
               </button>
             </div>
           </div>
