@@ -5,8 +5,10 @@ import { getCurrentUser, deleteCurrentUser } from "@/lib/api";
 import Image from "next/image";
 import toast from "react-hot-toast";
 import { MdDeleteOutline } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 const profile = () => {
+  const router = useRouter();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -152,7 +154,10 @@ const profile = () => {
               </button>
 
               <button
-                onClick={handleDelete}
+                onClick={() => {
+                  handleDelete();
+                  router.push("/login");
+                }}
                 disabled={deleting}
                 className="flex-1 px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition"
               >
