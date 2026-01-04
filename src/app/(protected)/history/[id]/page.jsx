@@ -47,6 +47,7 @@ const SinglePredictionPage = () => {
         cacheBust: true,
         backgroundColor: "#0f172a", // Tailwind bg-slate-900 (or match your theme)
         pixelRatio: 2, // higher quality
+        useCORS: true,
       });
 
       const link = document.createElement("a");
