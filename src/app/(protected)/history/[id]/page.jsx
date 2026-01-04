@@ -38,7 +38,7 @@ const SinglePredictionPage = () => {
     }
   }, [id]);
 
-  // Share & Save Handlers
+   // Share & Save Handlers
   const handleSave = async () => {
     if (!detailsRef.current) return;
 
@@ -55,7 +55,7 @@ const SinglePredictionPage = () => {
       link.click();
       toast.success("تمت الحفظ بنجاح.");
     } catch (error) {
-      toast.error("فشل في الحفظ!");
+      setError("فشل في الحفظ!");
     }
   };
 
@@ -84,10 +84,10 @@ const SinglePredictionPage = () => {
         toast.error("المشاركة بالصور غير مدعومة في هذا المتصفح.");
       }
     } catch (error) {
-      toast.error("فشل في المشاركة!");
+      setError("فشل في المشاركة!");
     }
   };
-
+  
   if (loading)
     return (
       <div className="min-h-screen grid place-items-center">يتم التحميل...</div>
