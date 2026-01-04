@@ -83,7 +83,7 @@ const page = () => {
                 <th className="px-3 py-2 whitespace-nowrap">أسم العملة</th>
                 <th className="px-3 py-2 whitespace-nowrap">الرمز</th>
                 <th className="px-3 py-2 whitespace-nowrap">القيمة</th>
-                <th className="px-3 py-2 whitespace-nowrap">نسبة التزوير</th>
+                <th className="px-3 py-2 whitespace-nowrap">نسبة الثقة</th>
                 <th className="px-3 py-2 whitespace-nowrap">التزوير</th>
                 {/* <th className="px-3 py-2 whitespace-nowrap">القيمة</th> */}
                 <th className="px-3 py-2 whitespace-nowrap">التفاصيل</th>
