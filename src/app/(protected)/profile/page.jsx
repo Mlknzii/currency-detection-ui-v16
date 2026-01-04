@@ -81,7 +81,7 @@ const profile = () => {
         {/* Avatar */}
         <div className=" flex justify-center">
           <Image
-            src="/avatar.png"
+            src="/avatar1.png"
             alt="profile picture"
             width={110}
             height={110}
