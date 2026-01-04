@@ -152,7 +152,7 @@ const SinglePredictionPage = () => {
 
           <div className="flex items-center justify-between w-full max-w-md  dark:border-gray-600 border-gray-400 pb-4 mb-4">
             <h2 className=" text-xl font-black text-gray-800 dark:text-gray-200">
-              نسبة التزوير:{" "}
+              نسبة الثقة:{" "}
             </h2>
             <p className="text-lg font-semibold text-gray-700 dark:text-gray-400">
               {prediction.confidence}%
