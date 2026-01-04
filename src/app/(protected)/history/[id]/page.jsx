@@ -67,6 +67,7 @@ const SinglePredictionPage = () => {
         cacheBust: true,
         backgroundColor: "#0f172a",
         pixelRatio: 2,
+        useCORS: true,
       });
 
       const blob = await (await fetch(dataUrl)).blob();
@@ -110,12 +111,11 @@ const SinglePredictionPage = () => {
         <div className=" w-full grid place-items-center p-5" ref={detailsRef}>
           <h1 className=" heading1 my-4">تفاصيل التعرف على العملة</h1>
           {prediction.image_path && (
-            <Image
-              width={400}
-              height={400}
+            <img
               src={`${API_URL}${prediction.image_path}`}
               alt={prediction.name_en}
-              className=" max-w-full object-cover rounded-lg my-8 shadow-lg"
+              className=" max-w-full w-[350px] object-cover rounded-lg my-8 shadow-lg"
+              crossOrigin="anonymous"
             />
           )}
 
