@@ -9,7 +9,7 @@ export default function Home() {
         <h1 className="text-4xl md:text-5xl font-bold text-center text-indigo-500">
           مرحبا بك في متعرف العملات... <br /> كيف يمكنني مساعدتك ؟
         </h1>
-        <button onClick={() => router.replace("/predict")}  className="btn btn-primary inline-block mt-6">
+        <button onClick={() => router.push("/predict")}  className="btn btn-primary inline-block mt-6">
           ابدأ الآن
           <FaArrowLeft className=" inline-block mr-2" />
         </button>
