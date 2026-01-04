@@ -112,11 +112,15 @@ const SinglePredictionPage = () => {
         <div className=" w-full grid place-items-center p-5" ref={detailsRef}>
           <h1 className=" heading1 my-4">تفاصيل التعرف على العملة</h1>
           {prediction.image_path && (
-            <img
+            <Image
               src={`${API_URL}${prediction.image_path}`}
               alt={prediction.name_en}
-              className=" max-w-full w-[350px] object-cover rounded-lg my-8 shadow-lg"
+              className=" max-w-full object-cover rounded-lg my-8 shadow-lg"
+              width={400}
+              height={400}
+              unoptimized
               crossOrigin="anonymous"
+              referrerPolicy="no-referrer"
             />
           )}
 
